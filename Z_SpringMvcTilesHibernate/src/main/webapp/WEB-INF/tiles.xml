@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+      "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+<tiles-definitions>  
+    <definition name="base.definition"  
+        template="/WEB-INF/jsp/skeleton/layout.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/jsp/skeleton/header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/jsp/skeleton/menu.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/jsp/skeleton/footer.jsp" />  
+    </definition>
+      
+    <definition name="userDetails" extends="base.definition">  
+        <put-attribute name="title" value="Add User" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/userDetails.jsp" />  
+    </definition>  
+  
+    <definition name="hello" extends="base.definition">  
+        <put-attribute name="title" value="Hello Spring MVC" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/hello.jsp" />  
+    </definition>  
+    
+    <definition name="login" template="/WEB-INF/jsp/login.jsp"> 
+    </definition>
+  
+</tiles-definitions>
