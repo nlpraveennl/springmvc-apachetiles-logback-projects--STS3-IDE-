@@ -1,5 +1,5 @@
 <div class="menu-item">
-	Menu1
+	<a href="checkbox.html" style="color:white">Static Checkbox</a>
 </div>
 <div class="menu-item">
 	Menu2

@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "userdetals")
+@Table(name = "userdetails")
 public class UserDetails
 {
 
@@ -21,6 +21,19 @@ public class UserDetails
 	private String	email;
 	private String	gender;
 	private Integer	roleId;
+
+	
+	public UserDetails()
+	{}
+	
+	
+	public UserDetails(String userName, String password)
+	{
+		super();
+		this.userName = userName;
+		this.password = password;
+	}
+
 
 	public Integer getId()
 	{

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+      "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="base.definition"
+		template="/WEB-INF/jsp/skeleton/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/skeleton/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/skeleton/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/skeleton/footer.jsp" />
+	</definition>
+	
+	<definition name="checkbox" extends="base.definition">
+		<put-attribute name="title" value="Add Qualification" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/checkbox.jsp" />
+	</definition>
+	
+	<definition name="checkboxes" extends="base.definition">
+		<put-attribute name="title" value="Add Cities" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/checkboxes.jsp" />
+	</definition>
+	
+	<definition name="checkboxes2" extends="base.definition">
+		<put-attribute name="title" value="Add Cities" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/checkboxes2.jsp" />
+	</definition>
+	
+	<definition name="radiobutton" extends="base.definition">
+		<put-attribute name="title" value="Add Cities" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/radiobutton.jsp" />
+	</definition>
+	
+	<definition name="radiobuttons" extends="base.definition">
+		<put-attribute name="title" value="Add Cities" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/radiobuttons.jsp" />
+	</definition>
+	
+	<definition name="select" extends="base.definition">
+		<put-attribute name="title" value="Add Cities" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/select.jsp" />
+	</definition>
+	
+	<definition name="userValidation" extends="base.definition">
+		<put-attribute name="title" value="Add Cities" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/userValidation.jsp" />
+	</definition>
+
+</tiles-definitions>

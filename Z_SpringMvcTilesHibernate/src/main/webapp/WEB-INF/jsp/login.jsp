@@ -28,37 +28,49 @@
 		{
 			margin-top: 25px;
 		}
+		.errors-container
+		{
+			color:red;
+			font-weight: bold;
+		}
 		</style>
 	</head>
 	
 	<body>
 		<div class="container-fluid">
-			<div class="login-form-container col-md-4 offset-md-3">
-				<div class="row login-form-header">
-					<p>Login Here</p>
+			<form:form method="post" action="authenticateUser.html" class="form-horizontal" modelAttribute="login">
+				<div class="login-form-container col-md-4 offset-md-4">
+					<div class="row login-form-header">
+						<p>Login Here</p>
+					</div>
+					<div class="login-form-body">
+						  <div class="form-group">
+						  	<div class="col-sm-12">
+						   		User Name
+						   	</div>
+						    <div class="col-sm-12">
+						      <form:input path="userName" type="text" placeholder="User Name" style="width:100%"/>
+						    </div>
+						  </div>
+						  <div class="form-group">
+						  	<div class="col-sm-12">
+						    	Password
+						    </div>
+						    <div class="col-sm-12">
+						      <form:password path="password" placeholder="Password" style="width:100%"/>
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <button type="submit" class="btn btn-default">Sign in</button>
+						    </div>
+						  </div>
+					</div>
 				</div>
-				<div class="login-form-body">
-					<form:form method="post" action="authenticateUser.html" class="form-horizontal">
-					  <div class="form-group">
-					    <label for="inputEmail3" class="col-sm-2 control-label">User Name</label>
-					    <div class="col-sm-12">
-					      <form:input path="userName" type="text" placeholder="User Name" />
-					    </div>
-					  </div>
-					  <div class="form-group">
-					    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-					    <div class="col-sm-12">
-					      <form:input path="password" placeholder="Password" />
-					    </div>
-					  </div>
-					  <div class="form-group">
-					    <div class="col-sm-offset-2 col-sm-10">
-					      <button type="submit" class="btn btn-default">Sign in</button>
-					    </div>
-					  </div>
-					</form:form>
+				<div class="errors-container col-md-4 offset-md-4">
+					<form:errors path="*" />
 				</div>
-			</div>
+			</form:form>
 		</div>
 	</body>
 </html>
